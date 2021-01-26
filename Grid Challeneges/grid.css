@@ -11,13 +11,14 @@
 }
 
 body {
-  background-color: #ccc;
-  height: 1000px;
+  background-color: #ededed;
+  line-height: 1.6;
 }
 
 .container {
   display: grid;
-  width: 90vw;
+  width: 80vw;
+  height: 80vh;
   margin: 10px auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1.2fr 1.5fr 1.5fr 1fr;
@@ -40,8 +41,30 @@ body {
 .junior-three,
 .junior-four {
   border-bottom: 3px solid red;
-  padding: 5px;
+  padding: 20px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3,
+h5 {
+  text-transform: capitalize;
+}
+
+h5 {
+  color: #c2bdbd;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+.bold-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .senior,

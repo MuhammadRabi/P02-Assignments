@@ -81,6 +81,37 @@ section {
   margin: 15px 0;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+}
+
+.item span {
+  padding: 0 10px;
+}
+
+.form-text p:nth-of-type(2) {
+  margin-top: 25px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+i {
+  color: #fff;
+  background: var(--main-bg-color);
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
 form input,
 textarea {
   border: 2px solid var(--main-fg-color);
@@ -89,6 +120,7 @@ textarea {
   width: 85%;
   padding: 8px 10px;
   background-color: transparent;
+  outline: none;
   color: var(--main-fg-color);
 }
 
@@ -96,20 +128,19 @@ textarea {
   width: 100%;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--main-fg-color);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-i {
-  color: #fff;
-  background: var(--main-bg-color);
-  font-size: 20px;
-  padding: 8px;
-  margin: 0 5px;
-  border-radius: 5px;
+form button {
+  background: #fff;
+  color: var(--main-bg-color);
+  border: transparent;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 10px 25px;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin: 5px;
 }
