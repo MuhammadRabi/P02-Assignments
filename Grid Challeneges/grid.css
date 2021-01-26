@@ -1,0 +1,98 @@
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-fg-color: #fafafa;
+  --main-bg-color: #1abc9c;
+}
+
+body {
+  background-color: #ccc;
+  height: 1000px;
+}
+
+.container {
+  display: grid;
+  width: 90vw;
+  margin: 10px auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.2fr 1.5fr 1.5fr 1fr;
+  grid-template-areas:
+    "osama osama senior sidebar-long"
+    "sidebar-small top top sidebar-long"
+    "sidebar-small minor minor sidebar-long"
+    "juniorone juniortwo juniorthree juniorfour";
+  grid-gap: 10px;
+}
+
+.osama,
+.sidebar-long,
+.sidebar-small,
+.senior,
+.minor,
+.top,
+.junior-one,
+.junior-two,
+.junior-three,
+.junior-four {
+  border-bottom: 3px solid red;
+  padding: 5px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.senior,
+.osama,
+.sidebar-small,
+.junior-one,
+.junior-three,
+.junior-four,
+.minor {
+  background-color: #fff;
+}
+.osama {
+  grid-area: osama;
+}
+
+.sidebar-small {
+  grid-area: sidebar-small;
+}
+.sidebar-long {
+  color: #fff;
+  background-color: #000;
+  grid-area: sidebar-long;
+}
+
+.senior {
+  grid-area: senior;
+}
+
+.junior-one {
+  grid-area: juniorone;
+}
+
+.junior-two {
+  grid-area: juniortwo;
+  color: #fff;
+  background-color: #000;
+}
+
+.junior-three {
+  grid-area: juniorthree;
+}
+
+.junior-four {
+  grid-area: juniorfour;
+}
+
+.top {
+  color: #fff;
+  background-color: #000;
+  grid-area: top;
+}
+.minor {
+  grid-area: minor;
+}
