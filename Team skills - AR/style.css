@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap");
+
+/* ===== my global rules ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* == 1D Grid == */
+.d-flex {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.col-1 {
+  width: 8.33%;
+  flex: 0 0 auto;
+}
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+  flex: 0 0 auto;
+}
+
+.col-4 {
+  width: 33.33%;
+  flex: 0 0 auto;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.6%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* == 1D Grid == */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-text {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.main-text span {
+  color: var(--idenity-fg-clr);
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* ===== my global rules ===== */
+
+nav {
+  padding: 7px;
+}
+
+ul li a {
+  margin: 5px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.5s ease-in-out;
+}
+
+ul li a:hover {
+  color: var(--idenity-fg-clr);
+}
+
+.hero,
+.about-us,
+.skills {
+  background-color: #f2f1f1;
+}
+
+.hero p {
+  line-height: 2;
+}
+
+.feat-box {
+  padding: 10px;
+  width: 80%;
+}
+
+.feat-box img {
+  width: 80px;
+}
+
+.about-us p {
+  line-height: 2;
+}
+
+.box h2 {
+  font-size: 48px;
+}
+
+.stats .box {
+  width: 85%;
+  color: #fff;
+}
+
+.stats .box span {
+  color: #fff;
+  font-size: 18px;
+}
+
+.b-one {
+  background-color: #91684a;
+}
+
+.b-two {
+  background-color: #5eaaa8;
+}
+
+.b-three {
+  background-color: #eb5e0b;
+}
+
+footer {
+  color: #dbd7d7;
+  background-color: #414040;
+  text-transform: capitalize;
+}
+:root {
+  --main-fg-clr: #000;
+  --second-fg-clr: #414040;
+  --idenity-fg-clr: #16b7e5;
+}
+.html {
+  direction: ltr;
+  text-transform: uppercase;
+}
+
+.html div {
+  width: 100%;
+  background-color: #ccc;
+  height: 35px;
+}
+
+.html div span {
+  display: block;
+  width: 85%;
+  height: 35px;
+  color: #fff;
+  font-family: Tahoma;
+  background-color: var(--idenity-fg-clr);
+}
