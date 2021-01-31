@@ -15,12 +15,14 @@
         crossorigin="anonymous" />
     <!-- google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,500;1,600;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- my main style file-->
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="scss/style.css">
     <title>Document</title>
 </head>
 
@@ -45,20 +47,43 @@
             </ul>
         </div>
         <aside>
-            <div class="sidebar">alex</div>
+            <div class="sidebar">
+                <div class="sidebar-details">
+                    <div class="avatar-img">
+                        <img src="./img/bussiness-man.png" class="img-fluid" alt="">
+                    </div>
+                    <h1>Muhammad Rabi</h1>
+                    <h4>Front-end developer</h4>
+                    <div class="social-details">
+                        <a href="#"><i class="fas fa-book"></i></a>
+                        <a href="#"><i class="fas fa-book"></i></a>
+                        <a href="#"><i class="fas fa-book"></i></a>
+                        <a href="#"><i class="fas fa-book"></i></a>
+                    </div>
+                    <button>Download CV</button>
+                    <div class="copyrights">
+                        <p>2021 All rights reserved</p>
+                    </div>
+                </div>
+            </div>
         </aside>
     </header>
+    <!-- Start Home page -->
     <section class="home">
-        <div class="content-area">
+        <div class="section-content">
             <h1>Muhammad Rabi</h1>
             <p>web designer</p>
         </div>
     </section>
-    <section class="resume">
+    <!-- End Home page -->
+    <!-- Start About page -->
+    <section class="about">
         <div class="container">
             <div class="section-content">
                 <!-- Personal Information -->
-                <h2>about <span>me</span></h2>
+                <div class="page-title">
+                    <h2>about <span class="idenity">me</span></h2>
+                </div>
                 <div class="row align-items-center">
                     <div class="col-sm-7 col-xs-12">
                         <div class="about">
@@ -89,7 +114,7 @@
                 <!-- End Personal Information -->
                 <!-- skills-->
                 <div class="about-skills">
-                    <h2>what <span>i do</span></h2>
+                    <h2>what <span class="idenity">i do</span></h2>
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
                             <div class="about-item">
@@ -130,41 +155,116 @@
 
                 <!-- Fun Facts-->
                 <div class="fun-facts">
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="fact-box">
-                                <i class="far fa-heart"></i>
-                                <p>Lorem, ipsum.</p>
-                                <span>25</span>
+                    <div class="container">
+                        <h2>fun <span class="idenity">facts</span></h2>
+
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="fact-box">
+                                    <i class="far fa-heart"></i>
+                                    <p>Lorem, ipsum.</p>
+                                    <span>25</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="fact-box">
-                                <i class="far fa-star"></i>
-                                <p>Lorem, ipsum.</p>
-                                <span>225</span>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="fact-box">
+                                    <i class="far fa-star"></i>
+                                    <p>Lorem, ipsum.</p>
+                                    <span>225</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <div class="fact-box">
-                                <i class="far fa-clock"></i>
-                                <p>Lorem, ipsum.</p>
-                                <span>5</span>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="fact-box">
+                                    <i class="far fa-clock"></i>
+                                    <p>Lorem, ipsum.</p>
+                                    <span>5</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="white-space-50"></div>
                 <!-- End Fun Facts-->
-
-
-
+                <!-- Testimonials-->
+                <!-- Swiper -->
+                <div class="testimonial">
+                    <h2>Testimonials</h2>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="image">
+                                        <img src="/img/istockphoto-891418898-1024x1024.png" class="img-fluid" alt="">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, accusamus! Non,
+                                        nemo
+                                        pariatur. Voluptatum culpa nulla ut ipsa quo corrupti dolores consequuntur
+                                        libero illo
+                                    </p>
+                                    <h5>Harvy Dent</h5>
+                                    <span>developer</span>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="image">
+                                        <img src="/img/istockphoto-891418898-1024x1024.png" class="img-fluid" alt="">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, accusamus! Non,
+                                        nemo
+                                        pariatur. Voluptatum culpa nulla ut ipsa quo corrupti dolores consequuntur
+                                        libero illo
+                                    </p>
+                                    <h5>Halle ox</h5>
+                                    <span>developer</span>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="image">
+                                        <img src="/img/istockphoto-891418898-1024x1024.png" class="img-fluid" alt="">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, accusamus! Non,
+                                        nemo
+                                        pariatur. Voluptatum culpa nulla ut ipsa quo corrupti dolores consequuntur
+                                        libero illo
+                                    </p>
+                                    <h5>Amanda sail</h5>
+                                    <span>developer</span>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div>
-
+            <!-- Swiper -->
         </div>
     </section>
+    <!-- Start About page -->
+    <!-- Start Resume page -->
+    <section class="resume">
+        <div class="container">
+            <div class="section-content">
+                <div class="page-title">
+                    <h2>resume</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End resume page -->
+    <!-- direction buttons-->
+    <div class="direction-btns"></div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
