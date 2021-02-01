@@ -35,6 +35,8 @@ li {
 .page-title h2 {
   font-size: 32px;
   text-transform: capitalize;
+  margin-bottom: 25px;
+  color: #eee;
 }
 .main-text {
   margin: auto;
@@ -61,8 +63,11 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-weight: 600;
+  margin-bottom: 25px;
 }
 
 h1 {
@@ -157,7 +162,7 @@ aside {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 45px;
+  width: 42px;
   height: 100px;
   background-color: var(--main-box-clr);
   border: 2px solid var(--idenity-clr);
@@ -190,19 +195,22 @@ section {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
 }
 
 /* === home section === */
+
+.hidden {
+  visibility: hidden;
+}
 
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
 }
 
 .section-content {
+  position: relative;
   color: var(--main-fg-clr);
   text-transform: capitalize;
   padding-left: 40px;
@@ -220,9 +228,6 @@ section {
 /* === home section === */
 
 /* === about section === */
-.about {
-  visibility: hidden;
-}
 
 .fact-box {
   text-align: center;
@@ -301,8 +306,170 @@ section {
   }
 }
 
-.resume {
-}
-
 /* === End testimonial === */
 /* === End About section === */
+
+/* === Start Resume section === */
+
+.resume {
+  .timeline {
+    position: relative;
+    display: table;
+    margin-bottom: 35px;
+
+    .divider {
+      position: absolute;
+      top: 6%;
+      left: 29%;
+      display: block;
+      width: 1px;
+      height: 80%;
+      background-color: var(--main-border-clr);
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        margin-top: 4px;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        margin-left: -8px;
+        border-radius: 10px;
+        background-color: var(--idenity-clr);
+        opacity: 0.25;
+        z-index: 0;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        margin-top: 8px;
+        width: 9px;
+        height: 9px;
+        margin-left: -4px;
+        background-color: #222;
+        border-radius: 5px;
+        border: 2px solid var(--idenity-clr);
+        z-index: 1;
+      }
+    }
+    .left-part {
+      width: 30%;
+      display: table-cell;
+      padding: 15px 24px 15px 0;
+      text-align: right;
+      font-size: 13px;
+      .time-period {
+        margin-bottom: 5px;
+      }
+    }
+
+    .right-part {
+      width: 70%;
+      font-size: 14px;
+      display: table-cell;
+      padding: 10px 10px 10px 20px;
+    }
+  }
+}
+
+.skill {
+  margin-bottom: 15px;
+  position: relative;
+
+  h5 {
+    padding: 3px 0;
+    margin-bottom: 0px;
+  }
+  .skill-value {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    font-size: 12px;
+    color: var(--heavy-fg-clr);
+  }
+
+  .progress-bar {
+    width: 90%;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid var(--idenity-clr);
+    border-radius: 5px;
+    span {
+      display: block;
+      background-color: var(--idenity-clr);
+      height: 5px;
+      border-radius: 5px;
+      margin: 0.3px 0 0.3px;
+    }
+  }
+}
+
+.skill-1 {
+  width: 95%;
+}
+
+.skill-2 {
+  width: 75%;
+}
+.skill-3 {
+  width: 65%;
+}
+.skill-4 {
+  width: 90%;
+}
+.skill-5 {
+  width: 70%;
+}
+.skill-6 {
+  width: 90%;
+}
+.skill-7 {
+  width: 95%;
+}
+.skill-8 {
+  width: 65%;
+}
+
+.know-items {
+  width: 75%;
+  li {
+    display: inline-flex;
+    color: #fff;
+    width: auto;
+    background-color: var(--idenity-clr);
+    margin: 5px 2px;
+    font-size: 12px;
+    padding: 2px 7px;
+    text-align: center;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+}
+
+.certificate-box {
+  width: 100%;
+  display: table;
+  border: var(--main-border);
+  border-radius: 8px;
+  .certi-logo {
+    display: table-cell;
+    width: 120px;
+    height: 100px;
+    vertical-align: middle;
+    background-color: var(--main-box-clr);
+    border-radius: 6px 0 0 6px;
+  }
+  .certi-info {
+    padding: 10px 35px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    .name h4 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* === End Resume section === */
