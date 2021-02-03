@@ -105,8 +105,23 @@ span.idenity {
 
 .side-menu li {
   border-bottom: 0px solid #2c2c2c;
-  margin: 25px;
+  margin: 25px 15px;
+  position: relative;
   text-align: center;
+}
+.side-menu li::after {
+  content: "";
+  position: absolute;
+  width: 155%;
+  height: 1px;
+  top: 59px;
+  left: -15px;
+  background-color: var(--main-border-clr);
+}
+.side-menu li span {
+  display: block;
+  font-size: 12px;
+  color: var(--main-fg-clr);
 }
 
 .side-menu li a {
@@ -117,12 +132,6 @@ span.idenity {
   font-size: 28px;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-}
-
-.side-menu span {
-  display: block;
-  font-size: 12px;
-  color: var(--main-fg-clr);
 }
 
 .side-menu li a:hover i,
@@ -511,16 +520,19 @@ section {
 }
 
 /* === End Resume section === */
-/*
-
-.fact-box i {
-
+/* === Start portfolio section === */
+.portfolio .img-box {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.portfolio .img-box:hover img {
+  transform: scale(1.1);
+}
+.portfolio .img-box img {
+  transition: 0.5s ease-in-out;
 }
 
-.fact-box span {
-  font-size: 36px;
-  color: var(--heavy-fg-clr);
-}
-*/
+/* === End portfolio section === */
 
 /*# sourceMappingURL=style.css.map */
