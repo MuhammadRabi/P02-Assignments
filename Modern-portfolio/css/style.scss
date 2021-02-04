@@ -1,5 +1,7 @@
 /* === my rules === */
 
+@import "../sass/components/buttons";
+
 :root {
   --idenity-clr: #04b4e0;
   --main-bg-clr: #222;
@@ -42,21 +44,6 @@ li {
   margin: auto;
   width: 50%;
   text-align: center;
-}
-
-.btn {
-  border-radius: 18px;
-  padding: 10px 20px;
-  color: #fff;
-  text-transform: capitalize;
-  background-color: transparent;
-  border: 2px solid var(--idenity-clr);
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-
-.btn:hover {
-  background-color: var(--idenity-clr);
 }
 
 .white-space-50 {
@@ -122,7 +109,7 @@ span.idenity {
     }
     span {
       display: block;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--main-fg-clr);
     }
   }
@@ -130,12 +117,11 @@ span.idenity {
 
 .side-menu li a {
   text-transform: capitalize;
-}
-
-.side-menu i {
-  font-size: 28px;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
+  i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
 }
 
 .side-menu li a:hover i,
@@ -159,20 +145,18 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.sidebar-details .avatar-img {
-  background-color: var(--main-fg-clr);
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  margin-top: 100px;
-  border: 3px solid #fff;
-}
-
-.sidebar-details img {
-  width: 140px;
-  margin-left: 11px;
+  .avatar-img {
+    background-color: var(--main-fg-clr);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin-top: 100px;
+    border: 3px solid #fff;
+  }
+  img {
+    width: 140px;
+    margin-left: 11px;
+  }
 }
 
 .copyrights {
@@ -184,6 +168,8 @@ aside {
   text-align: center;
 }
 
+/* navigation buttons */
+
 .direction-btns {
   position: fixed;
   bottom: 10px;
@@ -194,10 +180,19 @@ aside {
   border: 2px solid var(--idenity-clr);
   border-radius: 25px;
   cursor: pointer;
+  i {
+    font-size: 24px;
+    color: #7e7a7a;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: var(--idenity-clr);
+    }
+  }
 }
 
 /* === responsive ===*/
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   aside {
     left: -100%;
   }
@@ -210,9 +205,12 @@ aside {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   section {
     width: calc(100% - 505px);
+  }
+  .section-content {
+    padding-left: 40px;
   }
 }
 /* === responsive ===*/
@@ -239,7 +237,6 @@ section {
   position: relative;
   color: var(--main-fg-clr);
   text-transform: capitalize;
-  padding-left: 40px;
   margin-top: 50px;
   h1 {
     font-size: 48px;
@@ -536,7 +533,6 @@ section {
     color: var(--heavy-fg-clr);
   }
 }
-
 /* === End Resume section === */
 
 /* === Start portfolio section === */
@@ -553,4 +549,64 @@ section {
     }
   }
 }
+
 /* === End portfolio section === */
+
+/* === Start Blog section === */
+
+.blog {
+  .blog-box {
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+    .img-box {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.1);
+      }
+      img {
+        transition: 0.5s ease-in-out;
+      }
+    }
+    .project-tag {
+      position: absolute;
+      width: 60px;
+      height: 18px;
+      font-size: 10px;
+      padding: 1px 5px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      top: 10px;
+      left: 10px;
+      background-color: #fff;
+      color: var(--main-bg-clr);
+    }
+    .info-box {
+      background-color: var(--main-border-clr);
+      padding: 0 15px 15px;
+      .subtitle {
+        font-size: 12px;
+        color: var(--heavy-fg-clr);
+        padding: 10px 0;
+      }
+      .title {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* === End Blog section === */
+
+/* === media fixes=== */
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 1024px;
+  }
+}
