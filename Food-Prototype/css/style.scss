@@ -1,0 +1,95 @@
+/* importing sass files */
+
+@import "sass/variables";
+@import "sass/mixins";
+@import "sass/buttons";
+
+/* === my rules ===*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.white-space-50 {
+  padding-bottom: 50px;
+}
+
+.white-space-100 {
+  padding-bottom: 100px;
+}
+
+/* === my rules === */
+
+/* === fonts === */
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/Droid-Arabic-Kufi.ttf");
+}
+
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/DroidKufi-Regular.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/DroidKufi-Bold.ttf");
+  font-weight: 700;
+}
+
+/* === fonts === */
+
+body {
+  font-family: "droid";
+  background-color: #d1d1d1;
+  color: $idenityColor;
+  direction: rtl;
+}
+
+.section-title {
+  font-size: 18px;
+}
+
+header {
+  background-image: url("../img/food\ \(14\).jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  position: relative;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d1d1d1;
+    font-weight: 900;
+    font-size: 18px;
+    padding: 10px;
+    z-index: 9999;
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 50%;
+      a {
+        margin-left: 5px;
+      }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

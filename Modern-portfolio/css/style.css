@@ -18,7 +18,7 @@
   background-color: var(--idenity-clr);
 }
 
-:root {
+root {
   --idenity-clr: #04b4e0;
   --main-bg-clr: #222;
   --sidebar-bg-clr: #454242;
