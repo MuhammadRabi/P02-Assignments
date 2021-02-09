@@ -52,8 +52,6 @@ li {
 
 body {
   font-family: "droid";
-  background-color: #d1d1d1;
-  color: $idenityColor;
   direction: rtl;
 }
 
@@ -78,6 +76,8 @@ header {
     font-size: 18px;
     padding: 10px;
     z-index: 9999;
+    color: $idenityColor;
+
     .navigation {
       display: flex;
       align-items: center;
@@ -92,4 +92,166 @@ header {
       align-items: center;
     }
   }
+  .hero-text {
+    color: $lightColor;
+    width: 50%;
+    margin: 100px 0;
+    h1 {
+      padding-top: 20px;
+    }
+    p {
+      line-height: 2;
+      padding: 5px 0px;
+      font-size: 14px;
+    }
+  }
 }
+
+/* start who section */
+
+.who {
+  .section-info {
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      font-weight: 700;
+    }
+  }
+  .color-boxes {
+    .box {
+      color: #fff;
+      padding: 35px 15px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: $greenColor;
+
+      &.two {
+        background-color: $orangeColor;
+      }
+      i {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+/* End who section */
+/* start products section */
+.products {
+  background-color: #f8f8f8;
+  h2.title {
+    text-align: center;
+  }
+  .image-item {
+    img {
+      border-radius: 50%;
+      width: 210px;
+      height: 210px;
+    }
+  }
+}
+/* End products section */
+/* start service section */
+.service {
+  background-image: url("../img/food\ \(12\).jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  /* @include overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }*/
+
+  .service-box {
+    clip-path: polygon(13% 12%, 80% 0%, 97% 74%, 0 67%);
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 400px;
+  }
+  h2 {
+    text-align: right;
+    padding-top: 50px;
+  }
+  p {
+    padding: 10px 35px;
+  }
+}
+
+/* End service section */
+
+h2.title {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+section {
+  padding: 30px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/* start start section */
+
+.start {
+  background-color: $greenColor;
+  color: #fff;
+  .start-details {
+    p {
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    span {
+      padding: 100px;
+      border: 1px solid red;
+      /* &::after {
+        content: "";
+        position: absolute;
+        height: 120%;
+        width: 1px;
+        top: 0;
+        left: -250%;
+        background-color: #fff;
+      }*/
+    }
+  }
+}
+/* End start section */
+
+/* start value section */
+.value {
+  .value-item {
+    margin-bottom: 45px;
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
+/* End value section */
+
+/* Start products section */
+.clients {
+  background-color: #fff;
+}
+
+/* End products section */
+
+/* Start Why us section */
+.why-us {
+  background-color: $orangeColor;
+  color: #fff;
+}
+/* End Why us section */
+
+/* Start footer*/
+/* End footer*/
