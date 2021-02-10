@@ -5,3 +5,14 @@
   width: 100%;
   height: 100%;
 }
+
+@mixin overlay-small {
+  position: absolute;
+  top: 43%;
+  left: 18%;
+  width: 82%;
+  height: 20%;
+  color: #fff;
+  padding: 0 30px;
+  text-align: center;
+}
