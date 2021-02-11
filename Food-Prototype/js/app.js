@@ -47,3 +47,17 @@ function scrollToSection(element) {
 }
 // calling the navigation function
 scrollToSection(navLinks);
+
+// mini-navigatin on mobile screens
+
+const menuToggle = document.querySelector("nav .menu-toggle");
+const navigation = document.querySelector("nav .navigation");
+
+console.log(navigation);
+
+menuToggle.addEventListener("click", showNavigation);
+
+function showNavigation() {
+  navigation.classList.toggle("active");
+  menuToggle.classList.toggle("active");
+}

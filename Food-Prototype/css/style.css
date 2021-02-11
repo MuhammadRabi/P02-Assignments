@@ -113,22 +113,68 @@ nav {
   font-weight: 900;
   font-size: 18px;
   padding: 10px;
-  z-index: 9999;
+  z-index: 99;
   color: #97293c;
+  /* menu-toggle */
+  /* menu-toggle */
 }
 @media (max-width: 576px) {
   nav {
-    display: none;
+    padding: 0px;
+  }
+}
+@media (max-width: 576px) {
+  nav .menu-toggle {
+    background-image: url("../img/menu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-color: #97293c;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 999;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  nav .menu-toggle.active {
+    background-image: url("../img/close.png");
+    background-size: 20px;
   }
 }
 nav .navigation {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+@media (max-width: 576px) {
+  nav .navigation {
+    display: none;
+  }
+  nav .navigation.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+@media (max-width: 576px) {
+  nav .navigation li {
+    margin-bottom: 40px;
+  }
 }
 nav .navigation a {
   margin-left: 25px;
   transition: 0.5s ease-in-out;
+}
+@media (max-width: 576px) {
+  nav .navigation a {
+    margin-bottom: 25px;
+  }
 }
 nav .navigation a.active, nav .navigation a:hover {
   color: #b06c6c;
@@ -136,6 +182,11 @@ nav .navigation a.active, nav .navigation a:hover {
 nav .logo {
   display: flex;
   align-items: center;
+}
+@media (max-width: 576px) {
+  nav .logo {
+    display: none;
+  }
 }
 
 /* End navbar */
@@ -146,7 +197,7 @@ header {
   background-position: center;
   position: relative;
   height: 90vh;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
 }
 header .overlay {
   position: absolute;
@@ -164,7 +215,7 @@ header .hero-text {
 @media (max-width: 991px) {
   header .hero-text {
     width: 100%;
-    margin: 30px 0;
+    margin: 50px 0;
   }
 }
 header .hero-text h1 {
@@ -206,29 +257,53 @@ header .hero-text p {
 /* start products section */
 .products {
   background-color: #f8f8f8;
+  text-align: center;
 }
 .products h2.title {
   text-align: center;
 }
 .products .image-item {
   position: relative;
+  display: flex;
+  margin-bottom: 25px;
   overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+@media (min-width: 575px) {
+  .products .image-item {
+    width: 250px;
+    height: 200px;
+  }
+  .products .image-item:hover img {
+    transform: scale(1.05);
+  }
 }
 .products .image-item img {
-  border-radius: 50%;
-  width: 210px;
-  height: 210px;
+  border-radius: 15px;
+  transition: 0.5s ease-in-out;
 }
 .products .overlay {
   position: absolute;
-  top: 43%;
-  left: 18%;
-  width: 82%;
-  height: 20%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*82%;*/
+  height: 100%;
+  /*20%;*/
   color: #fff;
-  padding: 0 30px;
+  padding: 0 3px;
   text-align: center;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 576px) {
+  .products .overlay {
+    font-size: 12px;
+  }
 }
 
 /* End products section */
@@ -257,6 +332,12 @@ header .hero-text p {
   width: 100%;
   padding: 0px 35px;
 }
+@media (max-width: 576px) {
+  .service .service-box {
+    clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
+    padding: 0px 5px;
+  }
+}
 .service h2 {
   font-size: 42px;
   text-align: right;
@@ -266,6 +347,12 @@ header .hero-text p {
 }
 .service p {
   padding: 10px 55px;
+}
+@media (max-width: 576px) {
+  .service p {
+    padding: 0px 5px 20px;
+    font-size: 16px;
+  }
 }
 
 /* End service section */
@@ -330,6 +417,16 @@ header .hero-text p {
 footer {
   padding-top: 30px;
 }
+@media (max-width: 576px) {
+  footer {
+    padding-top: 5px;
+  }
+}
+@media (max-width: 576px) {
+  footer h2.title {
+    font-size: 24px;
+  }
+}
 footer i {
   font-size: 54px;
   color: #44a744;
@@ -338,6 +435,11 @@ footer i {
 }
 footer i:hover {
   color: #3dc82c;
+}
+@media (max-width: 576px) {
+  footer i {
+    font-size: 36px;
+  }
 }
 footer .copyrights p {
   text-transform: capitalize;

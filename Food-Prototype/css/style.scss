@@ -96,7 +96,6 @@ section {
   text-align: center;
 }
 /* start navbar */
-
 nav {
   display: flex;
   align-items: center;
@@ -105,19 +104,61 @@ nav {
   font-weight: 900;
   font-size: 18px;
   padding: 10px;
-  z-index: 9999;
+  z-index: 99;
   color: $idenityColor;
   @media (max-width: 576px) {
-    display: none;
+    padding: 0px;
   }
+  /* menu-toggle */
+  .menu-toggle {
+    @media (max-width: 576px) {
+      background-image: url("../img/menu.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-color: $idenityColor;
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      z-index: 999;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &.active {
+        background-image: url("../img/close.png");
+        background-size: 20px;
+      }
+    }
+  }
+  /* menu-toggle */
 
   .navigation {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease-in-out;
+    @media (max-width: 576px) {
+      display: none;
+      &.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+    }
+    li {
+      @media (max-width: 576px) {
+        margin-bottom: 40px;
+      }
+    }
     a {
       margin-left: 25px;
       transition: 0.5s ease-in-out;
+      @media (max-width: 576px) {
+        margin-bottom: 25px;
+      }
       &.active,
       &:hover {
         color: #b06c6c;
@@ -127,6 +168,9 @@ nav {
   .logo {
     display: flex;
     align-items: center;
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 }
 /* End navbar */
@@ -138,7 +182,7 @@ header {
   background-position: center;
   position: relative;
   height: 90vh;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
   .overlay {
     @include overlay;
     background-color: rgba(0, 0, 0, 0.6);
@@ -150,7 +194,7 @@ header {
     margin: 100px 0;
     @media (max-width: 991px) {
       width: 100%;
-      margin: 30px 0;
+      margin: 50px 0;
     }
     h1 {
       padding-top: 20px;
@@ -201,22 +245,38 @@ header {
 /* start products section */
 .products {
   background-color: #f8f8f8;
+  text-align: center;
+
   h2.title {
     text-align: center;
   }
 
   .image-item {
     position: relative;
+    display: flex;
+    margin-bottom: 25px;
     overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    @media (min-width: 575px) {
+      width: 250px;
+      height: 200px;
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
     img {
-      border-radius: 50%;
-      width: 210px;
-      height: 210px;
+      border-radius: 15px;
+      transition: 0.5s ease-in-out;
     }
   }
   .overlay {
     @include overlay-small;
     background-color: rgba(0, 0, 0, 0.6);
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
   }
 }
 /* End products section */
@@ -241,6 +301,10 @@ header {
     align-items: center;
     width: 100%;
     padding: 0px 35px;
+    @media (max-width: 576px) {
+      clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
+      padding: 0px 5px;
+    }
   }
   h2 {
     font-size: 42px;
@@ -251,6 +315,10 @@ header {
   }
   p {
     padding: 10px 55px;
+    @media (max-width: 576px) {
+      padding: 0px 5px 20px;
+      font-size: 16px;
+    }
   }
 }
 
@@ -324,6 +392,15 @@ header {
 /* Start footer*/
 footer {
   padding-top: 30px;
+  @media (max-width: 576px) {
+    padding-top: 5px;
+  }
+
+  h2.title {
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
 
   i {
     font-size: 54px;
@@ -332,6 +409,9 @@ footer {
     transition: 0.5s ease-in-out;
     &:hover {
       color: #3dc82c;
+    }
+    @media (max-width: 576px) {
+      font-size: 36px;
     }
   }
   .copyrights {
