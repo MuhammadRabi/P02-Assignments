@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: darkgray;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.grid div {
+  background-color: crimson;
+  color: #fff;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
