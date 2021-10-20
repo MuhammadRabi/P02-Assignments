@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --main-fg-color: #fafafa;
-  --main-bg-color: #1abc9c;
-}
-
 body {
   background-color: #ededed;
   line-height: 1.6;
@@ -17,29 +12,14 @@ body {
 
 .container {
   display: grid;
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
   margin: 10px auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1.2fr 1.5fr 1.5fr 1fr;
-  grid-template-areas:
-    "osama osama senior sidebar-long"
-    "sidebar-small top top sidebar-long"
-    "sidebar-small minor minor sidebar-long"
-    "juniorone juniortwo juniorthree juniorfour";
   grid-gap: 10px;
 }
 
-.osama,
-.sidebar-long,
-.sidebar-small,
-.senior,
-.minor,
-.top,
-.junior-one,
-.junior-two,
-.junior-three,
-.junior-four {
+.grid-item {
   border-bottom: 3px solid red;
   padding: 20px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
@@ -77,45 +57,55 @@ p {
   background-color: #fff;
 }
 .osama {
-  grid-area: osama;
+  grid-row: span 1;
+  grid-column: span 2;
 }
 
 .sidebar-small {
-  grid-area: sidebar-small;
+  grid-row: span 2;
+  grid-column: span 1;
 }
 .sidebar-long {
   color: #fff;
   background-color: #000;
-  grid-area: sidebar-long;
+  grid-row: 1 / span 3;
+  grid-column: 4 / span 1;
 }
 
 .senior {
-  grid-area: senior;
+  grid-row: span 1;
+  grid-column: span 1;
 }
 
 .junior-one {
-  grid-area: juniorone;
+  grid-row: span 1;
+  grid-column: span 1;
 }
 
 .junior-two {
-  grid-area: juniortwo;
+  grid-row: span 1;
+  grid-column: span 1;
   color: #fff;
   background-color: #000;
 }
 
 .junior-three {
-  grid-area: juniorthree;
+  grid-row: span 1;
+  grid-column: span 1;
 }
 
 .junior-four {
-  grid-area: juniorfour;
+  grid-row: span 1;
+  grid-column: span 1;
 }
 
 .top {
   color: #fff;
   background-color: #000;
-  grid-area: top;
+  grid-row: span 1;
+  grid-column: span 2;
 }
 .minor {
-  grid-area: minor;
+  grid-row: span 1;
+  grid-column: span 2;
 }
