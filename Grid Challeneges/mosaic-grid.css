@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ==================
+     start mosaic grid
+   ================== */
+.mosaic {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+.mosaic .mosaic-grid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+.mosaic .mosaic-item {
+  background-color: #ccc;
+  display: inline-flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mosaic .mosaic-item.one {
+  grid-column: span 4;
+  grid-row: span 4;
+  background-color: #333;
+  background-image: url("img/landing01.jpg");
+}
+.mosaic .mosaic-item.two {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url("img/shuffle-04.jpg");
+}
+.mosaic .mosaic-item.three {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url("img/shuffle-01.jpg");
+}
+.mosaic .mosaic-item.four {
+  grid-column: span 4;
+  grid-row: span 4;
+  background-image: url("img/landing03.jpg");
+}
+.mosaic .mosaic-item.five {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url("img/shuffle-08.jpg");
+}
+.mosaic .mosaic-item.six {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-image: url("img/shuffle-06.jpg");
+}
+
+/* ==================
+     end mosaic grid
+   ================== */
